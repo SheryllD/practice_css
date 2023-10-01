@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <style>
+      .container {
+        animation-name: myslidein;
+        animation-duration: 2s;
+        animation-iteration-count: 10;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+      }
+
+      .hexagon {
+        position: relative;
+        width: 100px;
+        height: 57.74px;
+        background-color: #00d1ae;
+        margin: 28.87px 0;
+      }
+
+      .hexagon:before,
+      .hexagon:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+      }
+
+      .hexagon:before {
+        bottom: 100%;
+        border-bottom: 28.87px solid #00d1ae;
+      }
+
+      .hexagon:after {
+        top: 100%;
+        width: 0;
+        border-top: 28.87px solid #00d1ae;
+      }
+
+      .div {
+        animation: myslidin 2s, myrotate 1.75s;
+      }
+      @keyframes myslidein {
+        0% {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        100% {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hexagon"></div>
+    </div>
+  </body>
+</html>
